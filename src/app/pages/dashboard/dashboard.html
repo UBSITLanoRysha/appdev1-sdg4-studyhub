@@ -1,0 +1,44 @@
+<section class="dashboard-hero">
+    <h1>📚 Browse Learning Resources</h1>
+    <p>Search for books and educational materials</p>
+  
+    <div class="search-bar">
+      <input
+        type="text"
+        placeholder="Search books e.g. mathematics, science..."
+        [value]="searchQuery()"
+        (input)="searchQuery.set($any($event.target).value)"
+        (keyup.enter)="searchBooks()"
+      />
+      <button (click)="searchBooks()">Search</button>
+    </div>
+  </section>
+  
+  <section class="results">
+    @if (isLoading()) {
+      <div class="loading">
+        <p>⏳ Loading books...</p>
+      </div>
+    }
+  
+    @if (errorMessage()) {
+      <div class="error">
+        <p>❌ {{ errorMessage() }}</p>
+      </div>
+    }
+  
+    @if (books().length > 0) {
+      <p class="results-count">Found {{ totalResults() }} results</p>
+      <div class="books-grid">
+        @for (book of books(); track book.key) {
+          <app-book-card [book]="book" (bookSelected)="onBookSelected($event)" />
+        }
+      </div>
+    }
+  
+    @if (!isLoading() && !errorMessage() && books().length === 0) {
+      <div class="empty-state">
+        <p>🔍 Search for a topic to find learning resources</p>
+      </div>
+    }
+  </section>

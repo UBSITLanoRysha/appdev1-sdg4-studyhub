@@ -1,0 +1,13 @@
+<div class="book-card" (click)="onSelect()">
+    <img [src]="getCoverUrl()" [alt]="book.title" class="book-cover" />
+    <div class="book-info">
+      <h3 class="book-title">{{ book.title | titlecase }}</h3>
+      <p class="book-author">
+        {{ book.author_name ? (book.author_name[0] | titlecase) : 'Unknown Author' }}
+      </p>
+      <p class="book-year">
+        {{ book.first_publish_year ? book.first_publish_year : 'N/A' }}
+      </p>
+      <a [routerLink]="['/resource', getBookId()]" class="btn-detail">View Details</a>
+    </div>
+  </div>

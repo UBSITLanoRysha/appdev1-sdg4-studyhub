@@ -1,0 +1,80 @@
+.dashboard-hero {
+    background: #1a73e8;
+    color: white;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .dashboard-hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .search-bar input {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 350px;
+    max-width: 100%;
+  }
+  
+  .search-bar button {
+    padding: 0.8rem 1.5rem;
+    background: #0d47a1;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .search-bar button:hover {
+    background: #083378;
+  }
+  
+  .results {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .results-count {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .loading, .error, .empty-state {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .error {
+    color: #d32f2f;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-hero h1 {
+      font-size: 1.5rem;
+    }
+  
+    .search-bar input {
+      width: 100%;
+    }
+  }
