@@ -12,6 +12,15 @@
     />
     <button (click)="searchBooks()">Search</button>
   </div>
+
+  <div class="quick-searches">
+    <span>Quick search:</span>
+    <button (click)="quickSearch('mathematics')">Mathematics</button>
+    <button (click)="quickSearch('science')">Science</button>
+    <button (click)="quickSearch('history')">History</button>
+    <button (click)="quickSearch('programming')">Programming</button>
+    <button (click)="quickSearch('literature')">Literature</button>
+  </div>
 </section>
 
 <section class="results">
