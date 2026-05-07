@@ -12,7 +12,7 @@ export class BookService {
 
   searchBooks(query: string): Observable<BookSearchResponse> {
     return this.http.get<BookSearchResponse>(
-      `${this.apiUrl}/search.json?q=${encodeURIComponent(query)}&limit=12`
+      `${this.apiUrl}/search.json?q=${encodeURIComponent(query)}&limit=20`
     ).pipe(
       catchError(error => {
         console.error('API error:', error);

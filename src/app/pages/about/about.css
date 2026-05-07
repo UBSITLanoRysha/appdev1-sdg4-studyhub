@@ -1,5 +1,5 @@
 .about-hero {
-  background: #1a73e8;
+  background: linear-gradient(135deg, #3A8B95, #66D0BC);
   color: white;
   padding: 3rem 2rem;
   text-align: center;
@@ -25,16 +25,16 @@
 
 .about-card {
   background: white;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #66D0BC;
   border-radius: 10px;
   padding: 2rem;
   width: 100%;
   max-width: 700px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(58, 139, 149, 0.15);
 }
 
 .about-card h2 {
-  color: #1a73e8;
+  color: #3A8B95;
   margin-bottom: 1rem;
 }
 

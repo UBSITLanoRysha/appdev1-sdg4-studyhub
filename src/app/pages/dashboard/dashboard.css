@@ -1,80 +1,114 @@
 .dashboard-hero {
-    background: #1a73e8;
-    color: white;
-    padding: 3rem 2rem;
-    text-align: center;
-  }
-  
+  background: linear-gradient(135deg, #FF3E9B, #FF88BA);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.dashboard-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-hero p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.search-bar input {
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 350px;
+  max-width: 100%;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 0.8rem 1.5rem;
+  background: #3A8B95;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-bar button:hover {
+  background: #2d6e77;
+}
+
+.quick-searches {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+}
+
+.quick-searches button {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.quick-searches button:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.results {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.results-count {
+  color: #3A8B95;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.loading, .error, .empty-state {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+@media (max-width: 768px) {
   .dashboard-hero h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
-  
-  .search-bar {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-    flex-wrap: wrap;
-  }
-  
+
   .search-bar input {
-    padding: 0.8rem 1.2rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    width: 350px;
-    max-width: 100%;
+    width: 100%;
   }
-  
-  .search-bar button {
-    padding: 0.8rem 1.5rem;
-    background: #0d47a1;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .search-bar button:hover {
-    background: #083378;
-  }
-  
-  .results {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .results-count {
-    color: #666;
-    margin-bottom: 1rem;
-  }
-  
-  .books-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .loading, .error, .empty-state {
-    text-align: center;
-    padding: 3rem;
-    font-size: 1.1rem;
-    color: #666;
-  }
-  
-  .error {
-    color: #d32f2f;
-  }
-  
-  @media (max-width: 768px) {
-    .dashboard-hero h1 {
-      font-size: 1.5rem;
-    }
-  
-    .search-bar input {
-      width: 100%;
-    }
-  }
+}

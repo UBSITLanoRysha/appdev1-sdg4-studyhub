@@ -59,6 +59,11 @@ export class DashboardComponent {
     );
   }
 
+  quickSearch(topic: string) {
+    this.searchQuery.set(topic);
+    this.searchBooks();
+  }
+
   onBookSelected(book: Book) {
     console.log('Selected book:', book.title);
   }
