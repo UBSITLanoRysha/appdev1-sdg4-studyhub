@@ -1,0 +1,38 @@
+<section class="login-page">
+  <div class="login-card">
+    <div class="login-logo">📚</div>
+    <h1>Welcome to StudyHub</h1>
+    <p class="login-subtitle">Your gateway to quality education resources</p>
+
+    <div class="sdg-badge">🎯 SDG 4 — Quality Education</div>
+
+    <div class="login-features">
+      <div class="login-feature">
+        <span>📖</span>
+        <p>Access millions of free books</p>
+      </div>
+      <div class="login-feature">
+        <span>🔍</span>
+        <p>Search by topic or subject</p>
+      </div>
+      <div class="login-feature">
+        <span>🌍</span>
+        <p>Learn from anywhere</p>
+      </div>
+    </div>
+
+    <button class="login-btn" (click)="login()" [disabled]="isLoading">
+      @if (isLoading) {
+        <span>⏳ Signing in...</span>
+      } @else {
+        <span>🚀 Get Started</span>
+      }
+    </button>
+
+    @if (error) {
+      <p class="error">{{ error }}</p>
+    }
+
+    <p class="login-note">Free access — no password required</p>
+  </div>
+</section>
