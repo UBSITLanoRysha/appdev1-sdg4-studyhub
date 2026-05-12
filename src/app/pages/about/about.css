@@ -1,60 +1,386 @@
-.about-hero {
-  background: linear-gradient(135deg, #3A8B95, #66D0BC);
+/* ===== MAGAZINE HERO ===== */
+.magazine-hero {
+  position: relative;
+  height: 92vh;
+  background-image: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=1600');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(255, 62, 155, 0.85) 0%,
+    rgba(58, 139, 149, 0.75) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content {
   color: white;
-  padding: 3rem 2rem;
+  max-width: 750px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero-content h2 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  padding-top: 2rem;
+}
+
+.hero-stat {
   text-align: center;
 }
 
-.about-hero h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+.hero-stat strong {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.3rem;
 }
 
-.about-hero p {
-  font-size: 1.1rem;
-  opacity: 0.9;
+.hero-stat span {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.about-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 3rem 2rem;
-}
-
-.about-card {
+/* ===== INTRO ===== */
+.magazine-intro {
   background: white;
-  border: 1px solid #66D0BC;
-  border-radius: 10px;
-  padding: 2rem;
-  width: 100%;
-  max-width: 700px;
-  box-shadow: 0 2px 8px rgba(58, 139, 149, 0.15);
+  padding: 4rem 2rem;
 }
 
-.about-card h2 {
+.intro-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.intro-sdg-logo img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.intro-text h2 {
+  font-size: 2rem;
   color: #3A8B95;
   margin-bottom: 1rem;
 }
 
-.about-card ul {
-  padding-left: 1.5rem;
+.intro-text p {
   color: #444;
-  line-height: 2;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 
-.about-card p {
-  color: #444;
+/* ===== TARGETS ===== */
+.magazine-targets {
+  background: #f9f9f9;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.magazine-targets h2 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #666;
+  margin-bottom: 2.5rem;
+  font-size: 1rem;
+}
+
+.targets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.target-card {
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.2s;
+  color: white;
+}
+
+.target-card:hover {
+  transform: translateY(-5px);
+}
+
+.target-card.pink {
+  background: linear-gradient(135deg, #FF3E9B, #FF88BA);
+}
+
+.target-card.teal {
+  background: linear-gradient(135deg, #3A8B95, #66D0BC);
+}
+
+.target-card span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.target-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.target-card p {
+  font-size: 0.88rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ===== IMPACT ===== */
+.magazine-impact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.impact-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.impact-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(255,62,155,0.9));
+  color: white;
+  padding: 2rem;
+}
+
+.impact-overlay h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.impact-overlay p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.impact-cards {
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.impact-card {
+  border-left: 3px solid #FF3E9B;
+  padding-left: 1.2rem;
+}
+
+.impact-card h3 {
+  color: #FF88BA;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.impact-card p {
+  color: #aaa;
+  font-size: 0.9rem;
   line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-  .about-hero h1 {
-    font-size: 1.5rem;
+.impact-card strong {
+  color: #FF3E9B;
+}
+
+/* ===== STUDYHUB ===== */
+.magazine-studyhub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+}
+
+.studyhub-image {
+  overflow: hidden;
+}
+
+.studyhub-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.studyhub-content {
+  background: linear-gradient(135deg, #fff0f7, #f0fafa);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.studyhub-content h2 {
+  font-size: 1.8rem;
+  color: #FF3E9B;
+  margin-bottom: 1rem;
+}
+
+.studyhub-content > p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.studyhub-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.studyhub-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: white;
+  padding: 1rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(255,62,155,0.1);
+}
+
+.studyhub-feature span {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.studyhub-feature h4 {
+  color: #FF3E9B;
+  margin-bottom: 0.2rem;
+  font-size: 0.95rem;
+}
+
+.studyhub-feature p {
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 3rem;
   }
 
-  .about-card {
-    padding: 1.5rem;
+  .hero-stats {
+    gap: 1.5rem;
+  }
+
+  .hero-stat strong {
+    font-size: 1.8rem;
+  }
+
+  .intro-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .intro-sdg-logo {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .targets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .magazine-impact,
+  .magazine-studyhub {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-image,
+  .studyhub-image {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .targets-grid {
+    grid-template-columns: 1fr;
   }
 }
