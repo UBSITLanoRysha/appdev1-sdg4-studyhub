@@ -1,30 +1,103 @@
 .not-found {
-    text-align: center;
-    padding: 5rem 2rem;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #FF3E9B, #FF88BA);
+}
+
+.not-found-card {
+  text-align: center;
+  max-width: 500px;
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.not-found-emoji {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+.not-found-code {
+  font-size: 6rem;
+  font-weight: bold;
+  background: linear-gradient(135deg, #FF3E9B, #3A8B95);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.not-found-card h2 {
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.not-found-card p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.btn-home {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF3E9B, #FF88BA);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-dashboard {
+  display: inline-block;
+  background: linear-gradient(135deg, #3A8B95, #66D0BC);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-home:hover,
+.btn-dashboard:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.not-found-sdg {
+  color: #3A8B95;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .not-found-code {
+    font-size: 4rem;
   }
-  
-  .not-found h1 {
-    font-size: 5rem;
-    color: #1a73e8;
-    margin-bottom: 1rem;
+
+  .not-found-card {
+    padding: 2rem 1.5rem;
   }
-  
-  .not-found p {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 2rem;
-  }
-  
-  .btn-home {
-    display: inline-block;
-    background: #1a73e8;
-    color: white;
-    padding: 0.8rem 2rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .btn-home:hover {
-    background: #0d47a1;
-  }
+}
