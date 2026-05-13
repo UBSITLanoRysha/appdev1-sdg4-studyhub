@@ -1,5 +1,5 @@
 <section class="dashboard-hero">
-  <h1>📚 Browse Learning Resources</h1>
+  <h1>Browse Learning Resources</h1>
   <p>Search for books and educational materials</p>
 
   <div class="search-bar">
@@ -26,14 +26,14 @@
 <section class="results">
   @if (!hasSearched()) {
     <div class="empty-state">
-      <p>🔍 Search for a topic to find learning resources</p>
+      <p>Search for a topic to find learning resources</p>
     </div>
   }
 
   @if (books$ | async; as state) {
     @if (state.loading) {
       <div class="loading">
-        <p>⏳ Loading books...</p>
+        <p>Loading books...</p>
       </div>
     }
 
